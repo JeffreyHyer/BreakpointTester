@@ -3,21 +3,43 @@
 	<head>
 		<title>Breakpoint Tester</title>
 
-		<style type="text/css">
-			body {
-				font-family: 'Arial', sans-serif;
-				font-size: 14px;
-			}
-		</style>
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/popup.css">
 	</head>
 	<body>
 		<h1>Breakpoint Tester</h1>
-		<ul>
-			<li><a href="#">480px</a></li>
-			<li><a href="#">768px</a></li>
-			<li><a href="#">992px</a></li>
-			<li><a href="#">1200px</a></li>
-			<li><a href="#">1600px</a></li>
-		</ul>
+
+		<hr>
+
+		<div id="presets">
+			<div class="preset" data-width="480">
+				<i class="fa fa-mobile"></i><br>
+				<span>480px</span>
+			</div>
+
+			<div class="preset" data-width="768">
+				<i class="fa fa-tablet"></i><br>
+				<span>768px</span>
+			</div>
+
+			<div class="preset" data-width="992">
+				<i class="fa fa-laptop"></i><br>
+				<span>992px</span>
+			</div>
+
+			<div class="preset" data-width="1200">
+				<i class="fa fa-desktop"></i><br>
+				<span>1200px</span>
+			</div>
+		</div>
+
+		<hr>
+
+		<div id="version">
+			<span>v0.0.1</span>
+		</div>
+
+		<script src="js/vendor/jquery.min.js"></script>
+		<script src="js/popup.js"></script>
 	</body>
 </html>

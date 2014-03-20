@@ -1,0 +1,89 @@
+@width: 540px;
+@height: 280px;
+
+@fontColor: #0a0a0a;
+@fontColorHover: lighten(@fontColor, 20%);
+@shadow: rgba(38, 38, 38, 0.75);
+
+@font-face {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Oswald Regular'), local('Oswald-Regular'), url(fonts/Oswald-Regular.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Oswald Bold'), local('Oswald-Bold'), url(fonts/Oswald-Bold.woff) format('woff');
+}
+
+body {
+	font-family: 'Oswald', sans-serif;
+	margin: 0;
+	padding: 15px 20px;
+	background-image: url(../img/background.png);
+	width: @width;
+	height: @height;
+	color: @fontColor;
+}
+
+h1 {
+	font-size: 42px;
+	font-weight: 400;
+	text-shadow: 1px 1px 0 @shadow;
+	margin: 0;
+	padding: 0;
+}
+
+hr {
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: @fontColor;
+	border-bottom: 1px solid @shadow;
+	border-style: solid;
+}
+
+#presets {
+	margin: 10px 0;
+
+	.preset {
+		padding: 10px 0;
+		margin: 0 0 12px 0;
+		float: left;
+		width: ((@width - 8px) / 4);
+		text-align: center;
+		border: 1px solid transparent;
+		border-radius: 3px;
+		font-weight: 700;
+
+		&.active,
+		&:hover {
+			border: 1px solid @fontColorHover;
+			color: @fontColorHover;
+			cursor: pointer;
+		}
+
+		.fa {
+			font-size: 92px;
+			text-shadow: 1px 1px 0 @shadow;
+		}
+
+		span {
+			font-size: 22px;
+			text-shadow: 1px 1px 0 @shadow;
+		}
+	}
+}
+
+#version {
+	font-size: 18px;
+	font-weight: bold;
+	text-shadow: 1px 1px 0 @shadow;
+	display: block;
+	width: 100%;
+	text-align: right;
+	letter-spacing: -1px;
+}
