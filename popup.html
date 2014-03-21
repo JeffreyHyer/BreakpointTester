@@ -3,14 +3,11 @@
 	<head>
 		<title>Breakpoint Tester</title>
 
-		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/vendor/font-awesome.min.css">
+		<link rel="stylesheet" href="css/vendor/jquery.nouislider.min.css">
 		<link rel="stylesheet" href="css/popup.css">
 	</head>
 	<body>
-		<h1>Breakpoint Tester</h1>
-
-		<hr>
-
 		<div id="presets">
 			<div class="preset" data-width="480">
 				<i class="fa fa-mobile"></i><br>
@@ -35,11 +32,27 @@
 
 		<hr>
 
-		<div id="version">
-			<span>v0.0.1</span>
+		<div id="customWrapper">
+			<div id="customHeader">
+				<h2>Custom Breakpoint</h2>
+				<div><span id="customValue"></span><button id="customSet">SET</button></div>
+			</div>
+
+			<div id="customBreakpoint"></div>
+		</div>
+
+		<hr>
+
+		<div id="footer">
+			<h1>Breakpoint Tester</h1>
+
+			<div id="version">
+				<span></span>
+			</div>
 		</div>
 
 		<script src="js/vendor/jquery.min.js"></script>
+		<script src="js/vendor/jquery.nouislider.min.js"></script>
 		<script src="js/popup.js"></script>
 	</body>
 </html>

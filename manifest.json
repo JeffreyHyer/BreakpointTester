@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Breakpoint Tester",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"description": "Easily switch between predefined (or user defined) breakpoints to test responsiveness.",
 	"icons": {
 		"16": "img/logo16.png",
@@ -16,6 +16,7 @@
 		"default_title": "Breakpoint Tester",
 		"default_popup": "popup.html"
 	},
+	"permissions": [],
 	"author": "Jeffrey Hyer",
 	"homepage_url": "https://github.com/JeffreyHyer/BreakpointTester",
 	"offline_enabled": true
