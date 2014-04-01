@@ -1,5 +1,9 @@
 # Release Changelog
 
+## v1.0.1
+**Mar 31, 2014**
++ Enabled Google Analytics to track usage of presets, custom breakpoints, etc. to facilitate future development.
+
 ## v1.0.0
 **Mar 21, 2014**
 + Switched to a lighter theme to better work with the default Chrome UI
