@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Breakpoint Tester",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Easily switch between predefined (or user defined) breakpoints to test responsiveness.",
 	"icons": {
 		"16": "img/logo16.png",
