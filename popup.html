@@ -8,37 +8,54 @@
 		<link rel="stylesheet" href="css/popup.css">
 	</head>
 	<body>
-		<div id="presets">
-			<div class="preset" data-width="480">
-				<i class="fa fa-mobile"></i><br>
-				<span>480px</span>
+		<div id="container">
+			<div id="left">
+				<span>History</span>
+				<ul>
+					<em><small>--No History--</small></em>
+				</ul>
 			</div>
+			
+			<div id="right">
+				<div id="presets">
+					<span>Presets <small>Bootstrap 3</small></span>
 
-			<div class="preset" data-width="768">
-				<i class="fa fa-tablet"></i><br>
-				<span>768px</span>
+					<div class="preset" data-width="480">
+						<i class="fa fa-mobile"></i><br>
+						<span>480px</span>
+					</div>
+
+					<div class="preset" data-width="768">
+						<i class="fa fa-tablet"></i><br>
+						<span>768px</span>
+					</div>
+
+					<div class="preset" data-width="992">
+						<i class="fa fa-laptop"></i><br>
+						<span>992px</span>
+					</div>
+
+					<div class="preset" data-width="1200">
+						<i class="fa fa-desktop"></i><br>
+						<span>1200px</span>
+					</div>
+				</div>
+
+				<hr>
+
+				<div id="customWrapper">
+					<div id="customHeader">
+						<h2>Custom</h2>
+						<div>
+							<span id="customValue"></span>
+							<button id="customSet">SET</button>
+							<!--<button id="customSave">SAVE</button>-->
+						</div>
+					</div>
+
+					<div id="customBreakpoint"></div>
+				</div>
 			</div>
-
-			<div class="preset" data-width="992">
-				<i class="fa fa-laptop"></i><br>
-				<span>992px</span>
-			</div>
-
-			<div class="preset" data-width="1200">
-				<i class="fa fa-desktop"></i><br>
-				<span>1200px</span>
-			</div>
-		</div>
-
-		<hr>
-
-		<div id="customWrapper">
-			<div id="customHeader">
-				<h2>Custom Breakpoint</h2>
-				<div><span id="customValue"></span><button id="customSet">SET</button></div>
-			</div>
-
-			<div id="customBreakpoint"></div>
 		</div>
 
 		<hr>

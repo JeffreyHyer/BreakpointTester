@@ -1,10 +1,12 @@
-@width: 540px;
+@width: 500px;
 @height: 280px;
 
-@primaryFontColor: #DDD;
-@secondaryFontColor: #0d91a1;
-@tertiaryFontColor: #DDD;
-@shadow: rgba(38, 38, 38, 0.75);
+@primaryFontColor: #BBB;
+@secondaryFontColor: #0D91A1;
+
+@borderColor: #DDD;
+
+
 
 @font-face {
 	font-family: 'Oswald';
@@ -26,93 +28,152 @@ body {
 	padding: 8px 15px;
 	background: #FFFFFF;
 	width: @width;
-	//height: @height;
+	// height: @height;
 	color: @primaryFontColor;
+
+	* {
+		box-sizing: border-box;
+	}
 }
 
 hr {
 	display: block;
 	width: 100%;
 	height: 1px;
-	background-color: @tertiaryFontColor;
+	background-color: @borderColor;
 	border: none;
 }
 
-#presets {
-	.preset {
-		padding: 10px 0;
-		margin: 0 0 12px 0;
+#container {
+	display: block;
+
+	#left {
+		display: inline-block;
+		width: (@width * 0.20);
 		float: left;
-		width: (@width / 4);
-		text-align: center;
-		border-radius: 3px;
-		font-weight: 400;
-
-		&.active,
-		&:hover {
-			color: @secondaryFontColor;
-			cursor: pointer;
-		}
-
-		.fa {
-			font-size: 88px;
-		}
+		padding: 0px 0 0 5px;
+		border-right: 1px solid @borderColor;
+		height: (@height - 68);
 
 		span {
-			font-size: 22px;
+			font-size: 16px;
+			text-transform: uppercase;
+			color: @secondaryFontColor;
 		}
-	}
-}
 
-#customWrapper {
-	position: relative;
-	margin-bottom: 15px;
-
-	#customHeader {
-		margin-bottom: 15px;
-
-		h2 {
-			font-size: 22px;
-			font-weight: 400;
-			font-variant: small-caps;
-			margin: 0;
+		ul {
+			list-style: none;
+			margin: 10px 0 0 0;
 			padding: 0;
-			display: inline;
-			color: @primaryFontColor;
-		}
 
-		div {
-			font-size: 22px;
-			display: inline;
-			position: absolute;
-			right: 0;
-		
-			#customValue {
-			
-			}
-
-			button {
+			li {
 				font-size: 18px;
-				font-family: 'Oswald', sans-serif;
-				background: @primaryFontColor;
-				color: #FFFFFF;
-				padding: 6px 10px;
-				margin-left: 10px;
-				border: none;
 				cursor: pointer;
-				margin-top: -1px;
+				margin-bottom: 10px;
 
 				&:hover {
-					background: @secondaryFontColor;
+					color: @secondaryFontColor;
 				}
 			}
 		}
 	}
 
-	#customBreakpoint {
-		width: (@width - 34px);
-		margin: 0 auto;
-		background-color: @secondaryFontColor;
+	#right {
+		display: inline-block;
+		width: ((@width * 0.80) - 12);
+		float: right;
+
+		#presets {
+			> span {
+				font-size: 16px;
+				text-transform: uppercase;
+				color: @secondaryFontColor;
+				display: block;
+
+				> small {
+					color: @borderColor;
+					margin-left: 8px;
+					vertical-align: 1px;
+				}
+			}
+
+			.preset {
+				padding: 5px 0;
+				margin: 0 0 8px 0;
+				float: left;
+				width: (((@width * 0.80) - 12) / 4);
+				text-align: center;
+				border-radius: 3px;
+				font-weight: 400;
+
+				&.active,
+				&:hover {
+					color: @secondaryFontColor;
+					cursor: pointer;
+				}
+
+				.fa {
+					font-size: 62px;
+				}
+
+				span {
+					font-size: 18px;
+				}
+			}
+		}
+
+		#customWrapper {
+			position: relative;
+			margin-bottom: 15px;
+
+			#customHeader {
+				margin-bottom: 25px;
+
+				h2 {
+					font-size: 16px;
+					font-weight: 400;
+					text-transform: uppercase;
+					margin: 0;
+					padding: 4px 0 0 0;
+					display: inline-block;
+					color: @secondaryFontColor;
+				}
+
+				div {
+					font-size: 18px;
+					display: inline;
+					position: absolute;
+					right: 0;
+					top: 0;
+				
+					#customValue {
+						margin-right: 10px;
+					}
+
+					button {
+						font-size: 16px;
+						font-family: 'Oswald', sans-serif;
+						background: @primaryFontColor;
+						color: #FFFFFF;
+						padding: 6px 10px;
+						margin-left: 5px;
+						border: none;
+						cursor: pointer;
+						margin-top: -1px;
+
+						&:hover {
+							background: @secondaryFontColor;
+						}
+					}
+				}
+			}
+
+			#customBreakpoint {
+				width: (((@width * 0.80) - 12px) - 36px);
+				margin: 15px auto;
+				background-color: @secondaryFontColor;
+			}
+		}
 	}
 }
 
@@ -120,9 +181,9 @@ hr {
 	position: relative;
 
 	h1 {
-		font-size: 24px;
+		font-size: 16px;
 		font-weight: 400;
-		font-variant: small-caps;
+		text-transform: uppercase;
 		margin: 0;
 		padding: 0;
 		display: inline;
@@ -130,13 +191,13 @@ hr {
 	}
 
 	#version {
-		font-size: 16px;
+		font-size: 14px;
 		font-weight: 400;
-		color: @tertiaryFontColor;
+		color: @primaryFontColor;
 		display: inline;
 		position: absolute;
 		right: 0;
-		bottom: 0;
+		bottom: 1px;
 		text-align: right;
 	}
 }
